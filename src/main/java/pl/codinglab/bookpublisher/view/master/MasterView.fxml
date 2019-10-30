@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="50.0" minWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.codinglab.bookpublisher.view.master.MasterView">
+    <children>
+        <TableView id="masterBooksTable" fx:id="booksTable" AnchorPane.bottomAnchor="0.0"
+                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columns>
+                <TableColumn prefWidth="75.0" text="%master.table.title">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="title"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="41.0" text="%master.table.isbn">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="isbn"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="41.0" text="%master.table.author">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="author"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="41.0" text="%master.table.status">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="status"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+        </TableView>
+    </children>
+</AnchorPane>
